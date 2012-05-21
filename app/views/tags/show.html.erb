@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div id="tag_show">
+	<p class="tag">
+		<b>Name:</b>
+		<%= @tag.name %>
+	</p>
+
+	<p class= tagged_tasks">
+	  <b>Tasks tagged by:</b>
+	  <%= @task.priority %>
+		</p>
+	<div class="actions">
+		<%= link_to 'Edit', edit_tag_path(@tag) %> |
+		<%= link_to 'Back', tags_path %>
+	</div>
+</div>

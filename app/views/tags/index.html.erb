@@ -1,0 +1,27 @@
+<table class="main_table">
+	<tr>
+		<th>Tags</th>
+		<th>Posts tagged:</th>
+    <th>Options</th>
+  </tr>
+
+<? @tags.each do |tag| %>
+	<tr>
+		<td class = "tag_name"><? tag.name %></td>
+    <td class = "posts_tagged"><? task.title %></td>
+		<td class = "options"><%# link_to 'Show', task %> 
+		</td>
+  </tr>
+<? end %>
+</table>
+
+<br />
+
+<table class="actions">
+	<tr><td><%= link_to 'New Task', new_task_path %></td>
+	<td>Edit tags</td>
+	<td>Clear finished tasks</td>
+	<td>Mark all finished</td>
+	<td><%= link_to 'ROAR!', root_path %></td>
+	</tr>
+</table>

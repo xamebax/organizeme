@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<div id="task_show">
+	<p class="title">
+		<b>Title:</b>
+		<%= @task.title %>
+	</p>
+
+	<p class= "priority">
+	  <b>Priority:</b>
+	  <%= @task.priority %>
+		</p>
+	<p class= "progress">
+	  <b>Progress:</b>
+	  <%= @task.progress %>%
+	</p>
+
+	<p class="details">
+		<b>Details:</b>
+		<%= @task.details %>
+		</p>
+	<p class="tags">
+		<b>Tags:</b>
+		<%= @task.tags.map { |t| t.name }.join(", ") %>
+	</p>
+
+	<div class="actions">
+		<%= link_to 'Edit', edit_task_path(@task) %> |
+		<%= link_to 'Back', tasks_path %>
+	</div>
+</div>
